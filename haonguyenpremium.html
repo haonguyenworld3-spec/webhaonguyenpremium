@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIP PREMIUM IOS - BỘ CẤU HÌNH SHADOWROCKET</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 20px 15px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #0b0f19;
+            color: #f1f5f9;
+            line-height: 1.5;
+            font-size: 14px;
+        }
+
+        /* Top Header Navbar */
+        .navbar {
+            background-color: #1e293b;
+            border-radius: 12px;
+            padding: 25px 20px;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #3b82f6;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+
+        .navbar .brand {
+            font-size: 24px;
+            font-weight: 800;
+            color: #38bdf8;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin: 0 0 6px 0;
+        }
+
+        .navbar .subtitle {
+            font-size: 13px;
+            color: #94a3b8;
+            margin: 0;
+        }
+
+        /* Banner Contact Box */
+        .cta-banner {
+            background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
+            border: 1px solid #4338ca;
+            border-radius: 12px;
+            padding: 18px 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .cta-banner .title {
+            font-size: 15px;
+            font-weight: bold;
+            color: #38bdf8;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .cta-banner .contact {
+            display: inline-block;
+            background-color: #0284c7;
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 15px;
+            padding: 8px 20px;
+            border-radius: 25px;
+            margin: 6px 0;
+            letter-spacing: 0.5px;
+            text-decoration: none;
+        }
+
+        .cta-banner p {
+            margin: 8px 0 0 0;
+            font-size: 12px;
+            color: #cbd5e1;
+        }
+
+        /* Features Cards Grid */
+        .features-grid {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .feature-card {
+            flex: 1;
+            background-color: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 10px;
+            padding: 14px;
+        }
+
+        .feature-card h4 {
+            margin: 0 0 6px 0;
+            font-size: 14px;
+            color: #38bdf8;
+        }
+
+        .feature-card p {
+            margin: 0;
+            font-size: 12px;
+            color: #94a3b8;
+        }
+
+        /* Section Title */
+        .section-title {
+            font-size: 15px;
+            font-weight: bold;
+            color: #f43f5e;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+            padding-bottom: 6px;
+            border-bottom: 1px solid #334155;
+            display: block;
+        }
+
+        /* App Table List */
+        .app-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 8px;
+            margin-bottom: 20px;
+        }
+
+        .app-row {
+            background-color: #1e293b;
+            border-radius: 8px;
+        }
+
+        .app-row td {
+            padding: 12px 16px;
+            vertical-align: middle;
+        }
+
+        .app-icon-name {
+            font-size: 14px;
+            font-weight: bold;
+            color: #38bdf8;
+            width: 25%;
+        }
+
+        .app-details {
+            font-size: 13px;
+            color: #cbd5e1;
+            width: 55%;
+        }
+
+        .app-status {
+            width: 20%;
+            text-align: right;
+        }
+
+        /* Badges Status */
+        .status-active {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: bold;
+            background-color: rgba(16, 185, 129, 0.15);
+            color: #34d399;
+            border: 1px solid #10b981;
+            text-transform: uppercase;
+        }
+
+        .status-updating {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: bold;
+            background-color: rgba(245, 158, 11, 0.15);
+            color: #fbbf24;
+            border: 1px solid #f59e0b;
+            text-transform: uppercase;
+        }
+
+        /* Guide Box */
+        .guide-box {
+            background-color: #111827;
+            border: 1px dashed #4b5563;
+            border-radius: 10px;
+            padding: 16px 20px;
+            margin-top: 20px;
+        }
+
+        .guide-box h3 {
+            margin: 0 0 10px 0;
+            font-size: 14px;
+            color: #f32474;
+            text-transform: uppercase;
+        }
+
+        .guide-box ol {
+            margin: 0;
+            padding-left: 20px;
+            font-size: 13px;
+            color: #9ca3af;
+        }
+
+        .guide-box li {
+            margin-bottom: 6px;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 25px;
+            text-align: center;
+            font-size: 12px;
+            color: #64748b;
+            border-top: 1px solid #1e293b;
+            padding-top: 12px;
+        }
+
+        @media (max-width: 600px) {
+            .features-grid {
+                flex-direction: column;
+            }
+            .app-row td {
+                display: block;
+                width: 100%;
+            }
+            .app-status {
+                text-align: left;
+                margin-top: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <div class="navbar">
+        <div class="brand">🚀 SHADOWROCKET VIP CONFIG</div>
+        <div class="subtitle">Giải Pháp Mở Khóa Premium & VIP Cho Tất Cả Ứng Dụng iOS</div>
+    </div>
+
+    <!-- Contact Banner -->
+    <div class="cta-banner">
+        <div class="title">🛒 MUA FILE CẤU HÌNH BẢN QUYỀN VĨNH VIỄN 50K</div>
+        <a href="https://t.me/nvah250410" class="contact" target="_blank">Telegram Admin: @nvah250410</a>
+        <p>Liên hệ Telegram Admin để đăng ký tài khoản, mua cấu hình riêng biệt và hỗ trợ cài đặt trực tiếp 1-1.</p>
+    </div>
+
+    <!-- Features Overview -->
+    <div class="features-grid">
+        <div class="feature-card">
+            <h4>⚡ Tốc Độ Cao</h4>
+            <p>Bẻ khóa trực tiếp qua bộ lọc script, không làm chậm tốc độ mạng.</p>
+        </div>
+        <div class="feature-card">
+            <h4>🔒 Mở Khóa Full Pro</h4>
+            <p>Sử dụng trọn bộ tính năng VIP, Gold, Premium của ứng dụng.</p>
+        </div>
+        <div class="feature-card">
+            <h4>🔄 Cập Nhật Liên Tục</h4>
+            <p>Bảo hành và cập nhật script mở khóa ngay khi ứng dụng thay đổi.</p>
+        </div>
+    </div>
+
+    <!-- App Status List -->
+    <span class="section-title">📱 DANH SÁCH ỨNG DỤNG BẺ KHÓA & TRẠNG THÁI</span>
+
+    <table class="app-table">
+        <tr class="app-row">
+            <td class="app-icon-name">🎬 CapCut Pro</td>
+            <td class="app-details">⚠️ <b>Đang cập nhật (Trong quá trình hoàn tất)</b> - Vui lòng chờ thông báo.</td>
+            <td class="app-status"><span class="status-updating">Đang Cập Nhật</span></td>
+        </tr>
+        <tr class="app-row">
+            <td class="app-icon-name">🎵 Spotify</td>
+            <td class="app-details">Mở khóa Spotify Premium: Nghe nhạc chất lượng cao, chuyển bài không giới hạn.</td>
+            <td class="app-status"><span class="status-active">Hoạt Động</span></td>
+        </tr>
+        <tr class="app-row">
+            <td class="app-icon-name">▶️ YouTube / Music</td>
+            <td class="app-details">Tắt sạch quảng cáo, phát nhạc nền khi tắt màn hình, tính năng Premium.</td>
+            <td class="app-status"><span class="status-active">Hoạt Động</span></td>
+        </tr>
+        <tr class="app-row">
+            <td class="app-icon-name">🎧 djay Pro</td>
+            <td class="app-details">Mở khóa bộ công cụ DJ Pro, hòa âm chuyên nghiệp và hiệu ứng âm thanh.</td>
+            <td class="app-status"><span class="status-active">Hoạt Động</span></td>
+        </tr>
+        <tr class="app-row">
+            <td class="app-icon-name">🎨 Alight Motion</td>
+            <td class="app-details">Xóa Watermark (logo), mở khóa toàn bộ gói hiệu ứng và bộ lọc VIP.</td>
+            <td class="app-status"><span class="status-active">Hoạt Động</span></td>
+        </tr>
+        <tr class="app-row">
+            <td class="app-icon-name">🖼️ PicsArt</td>
+            <td class="app-details">Mở khóa PicsArt Gold: Chỉnh sửa ảnh chuyên nghiệp, dùng kho công cụ trả phí.</td>
+            <td class="app-status"><span class="status-active">Hoạt Động</span></td>
+        </tr>
+        <tr class="app-row">
+            <td class="app-icon-name">📄 CamScanner</td>
+            <td class="app-details">Tài khoản Premium: Quét văn bản nét cao, xuất OCR, không bị dính watermark.</td>
+            <td class="app-status"><span class="status-active">Hoạt Động</span></td>
+        </tr>
+        <tr class="app-row">
+            <td class="app-icon-name">📞 Truecaller</td>
+            <td class="app-details">Mở khóa Truecaller Premium: Nhận diện cuộc gọi lừa đảo, làm phiền.</td>
+            <td class="app-status"><span class="status-active">Hoạt Động</span></td>
+        </tr>
+        <tr class="app-row">
+            <td class="app-icon-name">☁️ SoundCloud</td>
+            <td class="app-details">Mở khóa SoundCloud Go+: Nghe nhạc chất lượng cao, không quảng cáo.</td>
+            <td class="app-status"><span class="status-active">Hoạt Động</span></td>
+        </tr>
+        <tr class="app-row">
+            <td class="app-icon-name">🎥 Wink & KineMaster</td>
+            <td class="app-details">Mở khóa VIP Wink (Làm đẹp video 4K) & KineMaster Pro (Dựng phim).</td>
+            <td class="app-status"><span class="status-active">Hoạt Động</span></td>
+        </tr>
+        <tr class="app-row">
+            <td class="app-icon-name">✨ BeautyPlus & Locket</td>
+            <td class="app-details">Mở khóa trọn bộ tính năng VIP BeautyPlus & các gói Locket Gold.</td>
+            <td class="app-status"><span class="status-active">Hoạt Động</span></td>
+        </tr>
+    </table>
+
+    <!-- Guide Section -->
+    <div class="guide-box">
+        <h3>💡 Hướng Dẫn Mua & Kích Hoạt Cấu Hình</h3>
+        <ol>
+            <li>Nhắn tin trực tiếp qua Telegram Admin: <b>@nvah250410</b> để đăng ký mua cấu hình.</li>
+            <li>Admin sẽ gửi cho bạn đường dẫn/file cấu hình cá nhân hóa.</li>
+            <li>Thêm cấu hình vào ứng dụng <b>Shadowrocket</b> ➔ Bật tính năng <b>MITM & CA Certificate</b>.</li>
+            <li>Khởi chạy Shadowrocket và tận hưởng tất cả tính năng Premium trên các ứng dụng iOS.</li>
+        </ol>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        © 2026 Shadowrocket Premium Config • Hỗ trợ hệ điều hành iOS • Liên hệ Admin: Telegram @nvah250410
+    </div>
+
+</body>
+</html>
